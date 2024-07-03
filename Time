@@ -1,0 +1,24 @@
+def sleep_time_in_life(avg_sleep_per_day_hours, life_expectancy_years):
+    # Total number of hours slept in a lifetime
+    total_sleep_hours = avg_sleep_per_day_hours * 365.25 * life_expectancy_years
+    
+    # Convert hours to days
+    total_sleep_days = total_sleep_hours / 24
+    
+    # Convert days to months (approximation, assuming 30.44 days per month)
+    total_sleep_months = total_sleep_days / 30.44
+    
+    # Convert days to years
+    total_sleep_years = total_sleep_days / 365.25
+    
+    return total_sleep_hours, total_sleep_days, total_sleep_months, total_sleep_years
+
+# Example values
+average_sleep_per_day = 8  # average hours of sleep per day
+life_expectancy = 80  # average life expectancy in years
+
+hours, days, months, years = sleep_time_in_life(average_sleep_per_day, life_expectancy)
+print(f"Total time spent sleeping in a lifetime: {hours:.2f} hours")
+print(f"Total time spent sleeping in a lifetime: {days:.2f} days")
+print(f"Total time spent sleeping in a lifetime: {months:.2f} months")
+print(f"Total time spent sleeping in a lifetime: {years:.2f} years")
